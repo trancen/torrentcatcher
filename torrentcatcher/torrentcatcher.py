@@ -425,3 +425,9 @@ class TorrentCatcher():
                 self.logger.info(
                     'Initiated all downloads successfully'
                 )
+    # Function deletes an unwanted feed
+    def del_feed(self, feed_id):
+        self.cur.execute("DELETE FROM feeds WHERE id =?",
+                         (feed_id,))
+        self.con.commit()
+        self.logger.info('Feed ID:' + feed_id + ' was deleted.')
