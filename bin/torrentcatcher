@@ -95,6 +95,13 @@ def main():
         help="Adds given feed to the database."
     )
     parser.add_argument(
+        '-df',
+        '--del-feed',
+        nargs=1,
+        metavar='ID',
+        help="Delete an unwanted feed, use '--list feeds' to view feed ID ."
+    )
+    parser.add_argument(
         '-F',
         '--feed',
         help=("Checks all feeds for new torrents to add to the queue. DOES "
@@ -176,6 +183,9 @@ def main():
     if args.add_feed:
         argument = True
         tc.addfeed(args.add_feed[0], args.add_feed[1])
+    if args.del_feed:
+        argument = True
+        tc.del_feed(args.del_feed[0])
     if args.feed:
         argument = True
         tc.logger.info(
