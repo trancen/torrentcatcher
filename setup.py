@@ -2,18 +2,18 @@
 from setuptools import setup
 
 setup(
-    name="omv-torrentcatcher",
-    packages=['omv-torrentcatcher'],
-    version="2.1.1.1",
+    name="torrentcatcher",
+    packages=['torrentcatcher'],
+    version="2.1.1",
     license="GPLv3",
-    url="https://github.com/trancen/omv-torrentcatcher",
+    url="https://github.com/archangelic/torrentcatcher",
     description=("Takes torrent or magnet links from rss feeds you provide, "
                  "parses them and sends them to transmission via the "
-                 "transmission-remote command line utility. Credit to https://github.com/archangelic/torrentcatcher"),
-    author="David",
-    author_email="trancen@gmail.com",
+                 "transmission-remote command line utility."),
+    author="Michael Hancock",
+    author_email="michaelhancock89@gmail.com",
     download_url=(
-        "https://github.com/trancen/omv-torrentcatcher/tarball/v2.1.0"
+        "https://github.com/archangelic/torrentcatcher/tarball/v2.1.0"
     ),
     dependency_links=[
         'http://www.voidspace.org.uk/downloads/validate.py#egg=validate-1.0.1'
@@ -25,7 +25,7 @@ setup(
         'feedparser>=5.1.3',
         'tabulate>=0.7.3'
     ],
-    scripts=['bin/omv-torrentcatcher'],
+    scripts=['bin/torrentcatcher'],
     keywords=['torrent', 'rss', 'transmission'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
